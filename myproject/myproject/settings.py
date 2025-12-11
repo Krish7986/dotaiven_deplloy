@@ -88,11 +88,11 @@ DATABASES = {
             "ssl": {
                 "ca": os.path.join(BASE_DIR, "aiven_ca.pem"),
             },
-            "auth_plugin_map": "caching_sha2_password",
             "charset": "utf8mb4",
         }
     }
 }
+
 
 
   
