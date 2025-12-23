@@ -15,8 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path,include
+from avien_deploy.views import re,user_profile
+from app2.views import home,product
+from mixin1.views import viewers
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('app2.urls')),
+    path("mix/",viewers.as_view())
+    
+    # path("re/",re),
+    # path("profile/",user_profile),
+    # path("name/",name),
+    # path("product/<int:id>",product)
 ]
